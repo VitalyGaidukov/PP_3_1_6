@@ -11,7 +11,7 @@ public class Consumer {
 
     private static String cookie;
 
-    public  void getUsers(){
+    public void getUsers(){
 
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
@@ -25,6 +25,7 @@ public class Consumer {
 
         System.out.println(result);
     }
+
     public void createUser(){
 
         User user = new User(3,"James","Brown",36);
@@ -41,6 +42,7 @@ public class Consumer {
 
         System.out.println(result.getBody());
     }
+
     public void updateUser(){
 
         User user1 = new User(3,"Thomas","Shelby",36);
@@ -57,6 +59,7 @@ public class Consumer {
 
         System.out.println(result.getBody());
     }
+
     public void deleteUser(){
 
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -67,11 +70,11 @@ public class Consumer {
 
         String DELETE = "http://94.198.50.185:7081/api/users/3";
 
-        ResponseEntity<String> result = restTemplate.exchange(DELETE, HttpMethod.DELETE, entity,
-                String.class);
+        ResponseEntity<String> result = restTemplate.exchange(DELETE, HttpMethod.DELETE, entity, String.class);
 
         System.out.println(result.getBody());
     }
+
 
     public static void main(String[] args) {
 
