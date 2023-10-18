@@ -2,8 +2,9 @@ import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
 
-public class Consumer {
+public class Customer {
 
     RestTemplate restTemplate = new RestTemplate();
 
@@ -78,7 +79,7 @@ public class Consumer {
 
     public static void main(String[] args) {
 
-        Consumer consumer = new Consumer();
+        Customer consumer = new Customer();
 
         consumer.getUsers();
         consumer.createUser();
